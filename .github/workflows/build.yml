@@ -34,8 +34,12 @@ jobs:
         run: yarn set
       - name: Build project
         run: yarn build
-      - name: Publish to npm
+
+      - name: Commit built files
 #        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add dist/
+          git commit -m "Add built files"
+          git push
