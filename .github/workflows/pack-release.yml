@@ -2,8 +2,11 @@
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main", "latest" ]
+  pull_request:
+    branches: [ "main", "latest" ]
+  workflow_dispatch:
+    branches: [ "main", "latest" ]
 
 jobs:
   
