@@ -19,7 +19,7 @@ export const packages = {
         content: PackageContent.core,
         directory: 'js/core',
         devName: '@nlux-dev/core',
-        npmName: '@nlux/core',
+        npmName: '@amirgroi/nlux-core',
         npmConfigDirectory: 'pipeline/npm/core',
     },
     react: {
@@ -28,7 +28,7 @@ export const packages = {
         content: PackageContent.core,
         directory: 'react/core',
         devName: '@nlux-dev/react',
-        npmName: '@nlux/react',
+        npmName: '@amirgroi/nlux-react',
         npmConfigDirectory: 'pipeline/npm/react',
     },
     nlbridge: {
@@ -37,7 +37,7 @@ export const packages = {
         content: PackageContent.adapter,
         directory: 'js/nlbridge',
         devName: '@nlux-dev/nlbridge',
-        npmName: '@nlux/nlbridge',
+        npmName: '@amirgroi/nlux-nlbridge',
         npmConfigDirectory: 'pipeline/npm/nlbridge',
     },
     nlbridgeReact: {
@@ -46,7 +46,7 @@ export const packages = {
         content: PackageContent.adapter,
         directory: 'react/nlbridge',
         devName: '@nlux-dev/nlbridge-react',
-        npmName: '@nlux/nlbridge-react',
+        npmName: '@amirgroi/nlux-nlbridge-react',
         npmConfigDirectory: 'pipeline/npm/nlbridge-react',
     },
     langchain: {
@@ -55,7 +55,7 @@ export const packages = {
         content: PackageContent.adapter,
         directory: 'js/langchain',
         devName: '@nlux-dev/langchain',
-        npmName: '@nlux/langchain',
+        npmName: '@amirgroi/nlux-langchain',
         npmConfigDirectory: 'pipeline/npm/langchain',
     },
     langchainReact: {
@@ -64,7 +64,7 @@ export const packages = {
         content: PackageContent.adapter,
         directory: 'react/langchain',
         devName: '@nlux-dev/langchain-react',
-        npmName: '@nlux/langchain-react',
+        npmName: '@amirgroi/nlux-langchain-react',
         npmConfigDirectory: 'pipeline/npm/langchain-react',
     },
     openai: {
@@ -73,7 +73,7 @@ export const packages = {
         content: PackageContent.adapter,
         directory: 'js/openai',
         devName: '@nlux-dev/openai',
-        npmName: '@nlux/openai',
+        npmName: '@amirgroi/nlux-openai',
         npmConfigDirectory: 'pipeline/npm/openai',
     },
     openaiReact: {
@@ -82,7 +82,7 @@ export const packages = {
         content: PackageContent.adapter,
         directory: 'react/openai',
         devName: '@nlux-dev/openai-react',
-        npmName: '@nlux/openai-react',
+        npmName: '@amirgroi/nlux-openai-react',
         npmConfigDirectory: 'pipeline/npm/openai-react',
     },
     hf: {
@@ -91,7 +91,7 @@ export const packages = {
         content: PackageContent.adapter,
         directory: 'js/hf',
         devName: '@nlux-dev/hf',
-        npmName: '@nlux/hf',
+        npmName: '@amirgroi/nlux-hf',
         npmConfigDirectory: 'pipeline/npm/hf',
     },
     hfReact: {
@@ -100,7 +100,7 @@ export const packages = {
         content: PackageContent.adapter,
         directory: 'react/hf',
         devName: '@nlux-dev/hf-react',
-        npmName: '@nlux/hf-react',
+        npmName: '@amirgroi/nlux-hf-react',
         npmConfigDirectory: 'pipeline/npm/hf-react',
     },
     bedrock: {
@@ -109,7 +109,7 @@ export const packages = {
         content: PackageContent.adapter,
         directory: 'js/bedrock',
         devName: '@nlux-dev/bedrock',
-        npmName: '@nlux/bedrock',
+        npmName: '@amirgroi/nlux-bedrock',
         npmConfigDirectory: 'pipeline/npm/bedrock',
     },
     bedrockReact: {
@@ -118,7 +118,7 @@ export const packages = {
         content: PackageContent.adapter,
         directory: 'react/bedrock',
         devName: '@nlux-dev/bedrock-react',
-        npmName: '@nlux/bedrock-react',
+        npmName: '@amirgroi/nlux-bedrock-react',
         npmConfigDirectory: 'pipeline/npm/bedrock-react',
     },
     highlighter: {
@@ -127,7 +127,7 @@ export const packages = {
         content: PackageContent.extension,
         directory: 'extra/highlighter',
         devName: '@nlux-dev/highlighter',
-        npmName: '@nlux/highlighter',
+        npmName: '@amirgroi/nlux-highlighter',
         npmConfigDirectory: 'pipeline/npm/highlighter',
     },
     markdown: {
@@ -136,7 +136,7 @@ export const packages = {
         content: PackageContent.extension,
         directory: 'extra/markdown',
         devName: '@nlux-dev/markdown',
-        npmName: '@nlux/markdown',
+        npmName: '@amirgroi/nlux-markdown',
         npmConfigDirectory: 'pipeline/npm/markdown',
     },
     themes: {
@@ -145,7 +145,7 @@ export const packages = {
         content: PackageContent.theme,
         directory: 'css/themes',
         devName: '@nlux-dev/themes',
-        npmName: '@nlux/themes',
+        npmName: '@amirgroi/nlux-themes',
         npmConfigDirectory: 'pipeline/npm/themes',
     },
 };
