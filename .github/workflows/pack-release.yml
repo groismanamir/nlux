@@ -1,0 +1,55 @@
+﻿name: Pack and Release Subpackages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  
+  pack-and-release:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [ 20.x ]
+
+    permissions:
+      contents: write  # Needed to create/update releases
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: [ 20.x ]
+
+      - name: Get current version from root package.json
+        id: get-version
+        run: |
+          VERSION=$(jq -r '.version' package.json)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Pack all subpackages in dist/prod
+        run: |
+          mkdir packed
+          for dir in dist/prod/*; do
+            if [ -f "$dir/package.json" ]; then
+              echo "Packing $dir..."
+              cd "$dir"
+              npm pack
+              mv *.tgz ../../../packed/
+              cd - > /dev/null
+            fi
+          done
+
+      - name: Create GitHub release and upload tarballs
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.get-version.outputs.version }}
+          name: Release v${{ steps.get-version.outputs.version }}
+          files: packed/*.tgz
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
