@@ -27,7 +27,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: [ 20.x ]
+          node-version: "20"
 
       - name: Get current version from root package.json
         id: get-version
