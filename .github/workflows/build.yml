@@ -36,7 +36,7 @@ jobs:
         run: yarn build
 
       - name: Commit built files
-        if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main'
+        if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'latest'
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
