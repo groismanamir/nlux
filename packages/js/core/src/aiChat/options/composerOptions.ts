@@ -34,4 +34,9 @@ export interface ComposerOptions {
      * @default 'Enter'
      */
     submitShortcut?: 'Enter' | 'CommandEnter';
+
+    /**
+     * The style to be applied to the textarea element.
+     */
+    textareaCssClass?: string;
 }

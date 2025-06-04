@@ -1,12 +1,13 @@
 ﻿name: Pack and Release Subpackages
 
 on:
-  push:
-    branches: [ "main", "latest" ]
-  pull_request:
-    branches: [ "main", "latest" ]
-  workflow_dispatch:
-    branches: [ "main", "latest" ]
+  workflow_run:
+    workflows: ["Build"]
+    types:
+      - completed
+    branches:
+      - latest
+      - main
 
 jobs:
   

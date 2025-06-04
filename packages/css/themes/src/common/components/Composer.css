@@ -6,7 +6,7 @@
     background-color: transparent;
     gap: var(--nlux-prmBx--gap);
 
-    > textarea {
+    .textarea {
         font-family: var(--nlux-prmInp--ftFm), sans-serif;
         font-size: var(--nlux-prmInp--ftSz);
         font-weight: 400;
@@ -90,7 +90,7 @@
                 background-color: currentColor;
                 background-repeat: no-repeat;
                 background-size: contain;
-                mask: var(--nlux-send-icon);
+                /*mask: var(--nlux-send-icon);*/
                 aspect-ratio: 1;
             }
         }
