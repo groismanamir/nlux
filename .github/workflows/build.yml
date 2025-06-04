@@ -21,6 +21,8 @@ jobs:
         node-version: [ 20.x ]
 
     steps:
+      - name: Dump GitHub context
+        run: echo "${{ toJson(github.event) }}"
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
@@ -36,7 +38,7 @@ jobs:
         run: yarn build
 
       - name: Commit built files
-        if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main'
+        if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'latest'
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
