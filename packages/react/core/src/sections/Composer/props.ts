@@ -10,6 +10,8 @@ export type ComposerProps = {
     autoFocus?: boolean;
     hideStopButton?: boolean;
 
+    textareaCssClass?: string;
+
     hasValidInput?: boolean;
     submitShortcut?: 'Enter' | 'CommandEnter';
 
@@ -20,4 +22,5 @@ export type ComposerProps = {
 
     // UI Overrides
     Loader: ReactElement;
+    Footer?: ReactElement;
 };

@@ -240,6 +240,8 @@ export const AiChat: <AiMsg>(
                             onSubmit={handleSubmitPrompt}
                             onCancel={cancelLastMessageRequest}
                             Loader={uiOverrides.Loader}
+                            Footer={uiOverrides.Footer}
+                            textareaCssClass={props.composerOptions?.textareaCssClass}
                         />
                     </div>
                 </div>

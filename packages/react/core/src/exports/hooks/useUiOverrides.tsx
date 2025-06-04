@@ -30,8 +30,18 @@ export const useUiOverrides = (props: PropsWithChildren): AiChatUIOverrides => {
             .find((child) => child.type === AiChatUI.Greeting);
     }, [possibleUiOverrides]);
 
+    const Footer: ReactElement | undefined = useMemo(() => {
+        if (possibleUiOverrides.length === 0) {
+            return undefined;
+        }
+
+        return possibleUiOverrides
+            .find((child) => child.type === AiChatUI.Footer);
+    }, [possibleUiOverrides]);
+
     return {
         Loader,
         Greeting,
+        Footer
     };
 };
