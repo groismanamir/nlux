@@ -1,6 +1,6 @@
 {
   "name": "@nlux/langchain-react",
-  "version": "2.17.0",
+  "version": "2.17.3",
   "description": "The LangServe adapters for nlux React, the React JS library for building conversational AI interfaces.",
   "keywords": [
     "nlux",
@@ -58,10 +58,10 @@
     "directory": "packages/react/langchain"
   },
   "dependencies": {
-    "@nlux/langchain": "2.17.0"
+    "@nlux/langchain": "2.17.3"
   },
   "peerDependencies": {
-    "@nlux/react": "2.17.0",
+    "@nlux/react": "2.17.3",
     "react": "^18"
   },
   "main": "index.js",
